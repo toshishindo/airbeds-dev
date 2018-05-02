@@ -1,21 +1,27 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
+import React from 'react';
+import { ReactiveBase } from '@appbaseio/reactivesearch'; 
+import LeftColumn from './LeftColumn';
+import Card from './Card';
+import keys from './config/keys';
 import './App.css';
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
-    );
-  }
-}
+export default () => (
+  <div className="container">
+    <ReactiveBase
+      app="housing-dev"
+      credentials={keys.credentials}
+      type="listing"
+      theme={{
+        primaryColor: '#FF3A4E',
+      }}
+    >
+      <nav className="nav">
+        <div className="title">airbeds</div>
+      </nav>    
+      <LeftColumn />
+      <Card />
 
-export default App;
+    </ReactiveBase>
+  </div>
+);
+
