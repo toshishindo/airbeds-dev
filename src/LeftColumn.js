@@ -1,8 +1,14 @@
 import React from 'react';
-import { NumberBox, DateRange, RangeSlider } from '@appbaseio/reactivesearch';
+import { NumberBox, DateRange, RangeSlider, DataSearch } from '@appbaseio/reactivesearch';
 
 export default () => (
   <div className="left-col">
+    <DataSearch
+      componentId="Search"
+      dataField="name"
+      title="Search"
+    />
+
     <DateRange
       dataField="date_from"
       componentId="DateRangeSensor"

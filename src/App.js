@@ -1,5 +1,6 @@
 import React from 'react';
 import { ReactiveBase } from '@appbaseio/reactivesearch'; 
+import Header from './Header';
 import LeftColumn from './LeftColumn';
 import Card from './Card';
 import keys from './config/keys';
@@ -15,9 +16,7 @@ export default () => (
         primaryColor: '#FF3A4E',
       }}
     >
-      <nav className="nav">
-        <div className="title">airbeds</div>
-      </nav>    
+      <Header />
       <LeftColumn />
       <Card />
 
