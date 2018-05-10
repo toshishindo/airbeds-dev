@@ -16,6 +16,11 @@
   height: 52px;
   padding: 0 25px;
 }
+
+ul.navmenu li {
+  display: inline-block;
+}
+
 .container .left-col {
   width: 320px;
   height: 100%;
