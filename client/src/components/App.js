@@ -5,6 +5,7 @@ import {fetchUser } from '../modules/auth';
 import Dashboard from "./Dashboard";
 import Landing from "./Landing";
 import Header from "./Header";
+import requireAuth from './require_auth';
 import "./App.css";
 
 class App extends Component {
@@ -19,7 +20,7 @@ class App extends Component {
           <div>
             <Header />
             <Switch>
-              <Route path="/dashboard" component={Dashboard} />
+              <Route path="/dashboard" component={requireAuth(Dashboard)} />
               <Route path="/" component={Landing} />
             </Switch>
           </div>

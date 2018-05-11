@@ -15,6 +15,9 @@ class Header extends Component {
         );
       default:
         return [
+          <li key="3" style={{margin: '0 10px'}}>
+            <Link to={'/dashboard'}>Dashboard</Link>
+          </li>,
           <li key="2">
             <a href={'/auth/logout'}>Logout</a>
           </li>
@@ -26,7 +29,7 @@ class Header extends Component {
     return (
       <nav className="nav">
         <div className="title">
-          <Link to={this.props.auth ? '/dashboard' : '/'}>
+          <Link to={'/'}>
             airbeds
           </Link>
         </div>
