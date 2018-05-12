@@ -1,6 +1,7 @@
 .container {
   display: flex;
   padding-top: 52px;
+  font-family: Circular, Helvetica Neue, Helvetica, Arial, sans-serif;
 }
 .container .nav {
   width: 100%;
@@ -12,13 +13,15 @@
   justify-content: center;
   align-items: center;
   background-color: #FF3A4E;
-  color: #fff;
   height: 52px;
+  color: #fff;
   padding: 0 25px;
+  font-size: 30px;
 }
 
-ul.navmenu li {
+.container .nav ul.navmenu li {
   display: inline-block;
+  font-size: 14px;
 }
 
 .container .left-col {

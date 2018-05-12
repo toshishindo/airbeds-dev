@@ -10,32 +10,42 @@ class Header extends Component {
       case false:
         return (
           <li>
-            <a href={'/auth/google'}>Login With Google</a>
+            <a href={"/auth/google"} style={{color: 'white'}}>Login With Google</a>
           </li>
         );
       default:
         return [
-          <li key="3" style={{margin: '0 10px'}}>
-            <Link to={'/dashboard'}>Dashboard</Link>
+          <li key="3" style={{ margin: "0 10px" }}>
+            <Link to={"/dashboard"} style={{ textDecoration: "none", color: 'white' }}>
+              Dashboard
+            </Link>
           </li>,
           <li key="2">
-            <a href={'/auth/logout'}>Logout</a>
+            <a href={"/auth/logout"} style={{ textDecoration: "none", color: 'white' }}>
+              Logout
+            </a>
           </li>
-        ]; 
-    } 
+        ];
+    }
   }
 
   render() {
     return (
       <nav className="nav">
         <div className="title">
-          <Link to={'/'}>
-            airbeds
+          <Link to={"/"} style={{ textDecoration: "none", color: "white" }}>
+            Airbeds
           </Link>
         </div>
-          <ul className="navmenu" tyle={{ marginLeft: "10px" }}>
-            {this.renderContent()}
-          </ul>
+        <ul
+          className="navmenu"
+          style={{
+            marginLeft: "100px",
+            textDecoration: "none",
+          }}
+        >
+          {this.renderContent()}
+        </ul>
       </nav>
     );
   }
